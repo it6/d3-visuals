@@ -14,10 +14,7 @@ window.onload = () => {
     .enter("")
     .append("circle")
     .attr("r", d => d * 5)
-    .attr("fill", "none")
-    .attr("stroke", "black")
-    .attr("cx", width / 2)
-    .attr("cy", height / 2);
+    .attr("transform", `translate(${width / 2}, ${height / 2})`);
 
   const circle = svg
     .append("g")
@@ -26,14 +23,18 @@ window.onload = () => {
     .enter()
     .append("circle");
 
+  // all circles fill none and stroke black
+  svg
+    .selectAll("circle")
+    .attr("fill", "none")
+    .attr("stroke", "black");
+
   svg.on("mousemove", function() {
-    const mouseCoordinates = d3.mouse(this);
+    const mouseCoordinates = d3.mouse(this),
+      r = (Math.sqrt(mouseCoordinates[0]) + 10) / 10;
 
     circle
       .attr("transform", `translate(${mouseCoordinates})`)
-      .attr("r", d => d * 3)
-      .attr("fill", "none")
-      .attr("fill", "none")
-      .attr("stroke", "black");
+      .attr("r", d => d * r);
   });
 };
