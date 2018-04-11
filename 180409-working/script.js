@@ -1,25 +1,16 @@
 window.onload = () => {
-  // const width = 960,
-  //   height = 500,
-  //   svg = d3
-  //     .select("body")
-  //     .append("svg")
-  //     .attr("width", width)
-  //     .attr("height", height),
-  //   primaryGroup = svg.append("g").attr("transform", `translate(480, 250)`);
-
-  console.log(11, d3);
-  const data = [1, 2, 3, 4, 5, 6, 7, 8];
-  const yScale = d3
-    .scaleLinear()
-    .domain([0, d3.max(data)])
-    .range([0, 200]);
-
-  const svg = d3
-    .select('body')
-    .append('svg')
-    .attr('width', () => 400)
-    .attr('height', () => 600);
+  const width = 400,
+    height = 600,
+    data = [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    yScale = d3
+      .scaleLinear()
+      .domain([0, d3.max(data)])
+      .range([0, height / 1.5]),
+    svg = d3
+      .select('body')
+      .append('svg')
+      .attr('width', () => width)
+      .attr('height', () => height);
 
   svg
     .selectAll('rect')
@@ -27,7 +18,7 @@ window.onload = () => {
     .enter()
     .append('rect')
     .attr('x', d => 0)
-    .attr('yq', d => yScale(d))
+    .attr('y', d => yScale(d))
     .attr('height', d => 10)
     .attr('width', d => yScale(d));
 };
