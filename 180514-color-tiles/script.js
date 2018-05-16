@@ -21,7 +21,7 @@ window.onload = () => {
         .attr('height', column)
         .on('mouseover', updateElementColor)
         .on('touchmove', updateElementColor)
-        // .on('touchend', updateElementColor)
+        .on('touchend', updateElementColor)
         .on('touchstart', updateElementColor);
     }
   }
