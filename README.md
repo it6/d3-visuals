@@ -2,7 +2,4 @@
 
 [Codepen Demos](https://codepen.io/collection/nLLELb/)
 
-~~
-Old
-[Blocks demos](https://bl.ocks.org/it6)
-~~
+[Old demos](https://bl.ocks.org/it6)
