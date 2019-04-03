@@ -1,3 +1,8 @@
 # d3-visuals
 
-[demos](https://bl.ocks.org/it6)
+[Codepen Demos](https://codepen.io/collection/nLLELb/)
+
+~~
+Old
+[Blocks demos](https://bl.ocks.org/it6)
+~~

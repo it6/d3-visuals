@@ -7,7 +7,7 @@ window.onload = () => {
       .append('svg')
       .attr('width', 960)
       .attr('height', 500),
-    primaryGroup = svg.append('g').attr('transform', `translate(480, 250)`);
+    primaryGroup = svg.append('g').attr('transform', 'translate(480, 250)');
 
   const subGroups = primaryGroup
     .selectAll('g')
